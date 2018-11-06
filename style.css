@@ -89,7 +89,47 @@ td{
     padding-bottom: 10px;
     background-color: #0505057c;
     border: 1px solid #ffffff;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;    
 }
+
+td:hover {
+    background-image: url('russell.png');
+    color:rgba(255, 255, 255, 0);
+    background-size: 58px;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: shake;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+ }
+ 
+ @keyframes shake {
+    from,
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+ 
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: translate3d(-10px, 0, 0);
+      transform: translate3d(-10px, 0, 0);
+    }
+ 
+    20%,
+    40%,
+    56%,
+    80% {
+      -webkit-transform: translate3d(10px, 0, 0);
+      transform: translate3d(10px, 0, 0);
+    }
+  }
 
 .array{
     visibility: hidden;

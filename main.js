@@ -34,10 +34,13 @@ function createTable() {
         row.forEach(function (cell) {
         let newCell = document.createElement("td");
         if(cell == 1 || cell == S || cell == E) {
-          newCell.style.backgroundColor = '#cd4e20d4';
+          newCell.style.backgroundColor = '#ac1313';
         }
         if(cell == 0) {
-          newCell.style.backgroundColor = '#06535482';  
+          newCell.style.backgroundImage = "url('wall.png')";
+          newCell.style.backgroundSize = "50px 50px";
+          newCell.style.backgroundRepeat = "no-repeat";
+          newCell.style.backgroundposition = "center center";
         }
         newCell.textContent = cell;
         newRow.appendChild(newCell);
@@ -63,6 +66,7 @@ function setPic() {
         let newCell = document.createElement("td");
         if(cell == 1 || cell == S || cell == E) {
           newCell.style.color = 'rgba(255, 255, 255, 0)';
+          newCell.style.backgroundColor = '#093c58';
           newCell.style.backgroundImage = "url('russell.png')";
           newCell.style.backgroundSize = "50px 50px";
           newCell.style.backgroundRepeat = "no-repeat";
@@ -151,8 +155,8 @@ function point(pos, last) {
 
 function start() {
   var result = '';
-  findPath();
   setPic();
+  findPath();
   for (var i = 0; i < pathX.length; i++) {
     result += '(' + pathX[i] + ',' + pathY[i] + ')' + '<br/>';
 
